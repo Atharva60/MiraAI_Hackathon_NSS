@@ -1,0 +1,31 @@
+metdata:
+  name:"Cricket Blog Generator"
+  description:"This flows write a blog about a particular cricket match"
+  author:"atharvap60"
+  tags:[Cricket, Blog Writing, Commentary]
+  private: false
+
+inputs:
+  topic:
+    type: string
+    description: "Enter the details of a specific cricket match"
+    required: true
+    example:"India vs Australia 3rd ODI 2016 in Australia"
+  style:
+    type: string
+    description: "Enter the country to which the author's style should belong to"
+    required: true
+    example:"British, Australian, Indian"
+
+model:
+  provider: "meta"
+  name: "llama-3.1-8b-instruct:free"
+
+prompt:
+  "Write a newspaper blog for the cricket match {topic} in the style of {style}."
+
+readme:
+  "This flow generates a blog about a cricket match in the style of a newspaper article. The user can input the details of the match and the style of the article. The flow will generate a blog about the match in the style of a newspaper article."
+  Example:
+    topic: "India vs Australia 3rd ODI 2016 in Australia"
+    style: "British"
